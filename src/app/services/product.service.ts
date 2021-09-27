@@ -8,6 +8,8 @@ import { Product } from '../interfaces/Product';
 })
 export class ProductService {
 
+  url: string = "http://localhost:3000/product";
+
   products: Product [] = [
     {
         id : 1,

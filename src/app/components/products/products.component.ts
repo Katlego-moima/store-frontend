@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ConnectService } from 'src/app/services/connect.service';
 import { Product } from '../../interfaces/Product';
 
 
@@ -9,19 +10,26 @@ import { Product } from '../../interfaces/Product';
 })
 export class ProductsComponent implements OnInit {
 
-  @Input() product: Product = {
-    id: 0,
-    name: "",
-    description: "",
-    price: 0,
-    size: "",
-    imgUrl: "",
-  };
 
-  constructor() { }
+  products:any;
+
+
+  constructor(private apiService: ConnectService) { }
 
   ngOnInit(): void {
+
+    this.apiService
+    .getProducts() .subscribe((product) => (this.products = product)
     
+ 
+    );
+
   }
+  //   this.apiService.getProducts().subscribe((res)=>
+  //   {
+  //     this.products=res;
+  //     console.log(res);
+  //   })
+  // }
 
 }

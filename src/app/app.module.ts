@@ -8,7 +8,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CartComponent } from './components/cart/cart.component';
-import { ProductDisplayComponent } from './views/product-display/product-display.component';
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -17,12 +17,12 @@ import { ProductDisplayComponent } from './views/product-display/product-display
     LoginComponent,
     RegisterComponent,
     NavbarComponent,
-    CartComponent,
-    ProductDisplayComponent
+    CartComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
