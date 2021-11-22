@@ -1,20 +1,82 @@
-<div class="product-card" *ngFor="let product of products">
-    <div class="product-tumb">
-      <img src="{{product.imgUrl}}" alt="" />
-    </div>
+<!-- 
+<div class="cards">
+  <div class="row">
 
-    <div class="product-details" >
     
-      <h4>
-        <a href="">{{ product.name }}</a>
-      </h4>
-      <p>
-        {{ product.description }}
-      </p>
-      <div class="product-bottom-details">
-        <div class="product-price">R{{ product.price }}</div>
+    <div class="product-card" *ngFor="let product of products">
+      <div class="product-tumb">
+        <img src="{{product.imgUrl}}" alt="" />
+      </div>
+      
+      <div class="product-details" >
         
-       
+        <h4>
+          <a href="">{{ product.name }}</a>
+        </h4>
+        <p>
+          {{ product.description }}
+        </p>
+        <div class="product-bottom-details">
+          <div class="product-price">R{{ product.price }}</div>
+          
+          
+        </div>
       </div>
     </div>
   </div>
+  
+  
+</div> -->
+
+
+<!-- another card -->
+
+
+
+
+
+  <br>  
+  
+  
+  
+  <div class="row">
+  <div class="container">
+    
+
+   
+    <div class="card-product" *ngFor="let product of products">
+      <div class="img-wrap"><img src="{{product.imgUrl}}" alt="" /></div>
+      <figcaption class="info-wrap">
+          <h4 class="title">{{ product.name }}</h4>
+          <p class="desc">{{ product.description }}</p>
+      </figcaption>
+      <div class="bottom-wrap">
+        <a href="" class="btn btn-sm btn-primary float-right">Add to cart</a>	
+        <div class="price-wrap h5">
+          <span class="price">R{{ product.price }}</span>
+        </div> <!-- price-wrap.// -->
+      </div> <!-- bottom-wrap.// -->
+    </div>
+ 
+  </div> <!-- col // -->
+ 
+  </div> <!-- col // -->
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
